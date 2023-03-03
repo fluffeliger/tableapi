@@ -2,6 +2,11 @@ class InvalidArgSizeException(Exception):
     def __init__(self, *args: object) -> None:
         super().__init__(*args)
 
+class InvalidArgsException(Exception):
+    def __init__(self, *args: object) -> None:
+        super().__init__(*args)
+
+
 class InvalidIndexException(Exception):
     def __init__(self, *args: object) -> None:
         super().__init__(*args)
@@ -46,6 +51,17 @@ class Table:
             for i in range(self.columns):
                 self.max_column_lengths.append(0)
             self.set_header(*args)
+    
+    def set_theme(self, vertical: str, horizontal: str, dot: str) -> None:
+        '''Set the theme of the table.\n
+        NOTE: Every argument has to have the length of exactly one!
+        '''
+        if len(vertical) != 1 or len(horizontal) != 1 or len(dot) != 1: raise InvalidArgsException(f'The args has to be one charactor wide')
+        self.table_design = {
+            'v': vertical,
+            'h': horizontal,
+            'd': dot
+        }
     
     def set_header(self, *args: str) -> None:
         '''Set the header of the table.\n

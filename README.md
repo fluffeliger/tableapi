@@ -8,7 +8,7 @@ After this we can staaaarrrrtttttt :D
 
 The import should look something like this
 ```py
-from TableAPI.tableapi import Table
+from TableAPI import Table
 ```
 
 To write a simple Table, create a table object with the columns and a simple row:
@@ -41,6 +41,14 @@ table = Table('A', 'B')
 print(table.build()) # Table#Build() will return the table as a string
 ```
 Here you go ;)
+<hr>
+
+#### Define a new Design
+Simple as before, change the design of the table with this here:
+```py
+table.set_theme('|', '-', '+') # Horizontal, Vertical and last one is the dot between
+```
+This will display a table with the normal design
 <hr>
 
 #### Define new Header
