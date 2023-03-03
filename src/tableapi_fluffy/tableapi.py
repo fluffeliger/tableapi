@@ -29,13 +29,13 @@ class Table:
         self.header = []
         self.rows = []
         self.max_column_lengths = []
-        if len(args) == 0: raise InvalidArgSizeException('__init__(int) or __init__(*string)')
+        if len(args) == 0: raise InvalidArgSizeException('__init__(int [positive]) or __init__(*string)')
         elif type(args[0]) == int:
-            if not len(args) == 1: raise InvalidArgSizeException('__init__(int) or __init__(*string)')
+            if not len(args) == 1: raise InvalidArgSizeException('__init__(int [positive]) or __init__(*string)')
+            if args[0] <= 0: raise InvalidArgSizeException('__init__(int [positive]) or __init__(*string)')
             self.columns = args[0]
             for i in range(self.columns):
                 self.max_column_lengths.append(0)
-                self.header.append('')
         else:
             self.columns = len(args)
             for i in range(self.columns):
@@ -103,12 +103,13 @@ class Table:
         '''
         final = self.__build_line()
 
-        final += '|'
-        for i in range(self.columns):
-            final += f' {Util.build_space(self.header[i], self.max_column_lengths[i])} |'
-        final += '\n'
+        if len(self.header) == self.columns:
+            final += '|'
+            for i in range(self.columns):
+                final += f' {Util.build_space(self.header[i], self.max_column_lengths[i])} |'
+            final += '\n'
 
-        final += self.__build_line()
+            final += self.__build_line()
 
         for row in self.rows:
             final += '|'
