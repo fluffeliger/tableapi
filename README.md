@@ -8,7 +8,7 @@ After this we can staaaarrrrtttttt :D
 
 The import should look something like this
 ```py
-from TableAPI.tableapi import Table
+from TableAPI import Table
 ```
 
 To write a simple Table, create a table object with the columns and a simple row:
