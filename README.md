@@ -3,6 +3,9 @@ TableAPI is a very simple "API"  to create tables in the python console.
 Its not much but i love this project lmao :)
 
 ## Getting Started
+First things first: Install the latest version with pip [here](https://pypi.org/project/TableAPI/).
+After this we can staaaarrrrtttttt :D
+
 To write a simple Table, create a table object with the columns and some simple rows:
 
 ```py
