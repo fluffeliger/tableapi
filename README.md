@@ -6,6 +6,11 @@ Its not much but i love this project lmao :)
 First things first: Install the latest version with pip [here](https://pypi.org/project/TableAPI/).
 After this we can staaaarrrrtttttt :D
 
+The import looks like this
+```py
+from TableAPI.tableapi import Table
+```
+
 To write a simple Table, create a table object with the columns and some simple rows:
 
 ```py
