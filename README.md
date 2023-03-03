@@ -11,7 +11,7 @@ The import looks like this
 from TableAPI.tableapi import Table
 ```
 
-To write a simple Table, create a table object with the columns and some simple rows:
+To write a simple Table, create a table object with the columns and a simple rows:
 
 ```py
 table = Table('A', 'B')
