@@ -107,6 +107,14 @@ it will raise this exception, because you can only define 1 column integer or mu
 If the Constructor is empty, it doesnt work.
 <hr>
 
+#### InvalidArgsException
+This Exception will raise, if the arguments doesnt match a valid pattern (for example in Table#set_theme)
+```py
+table.set_theme('', '', '')
+```
+This will raise the Exception, because the rule for each argument is: The length has to be exactly 1
+<hr>
+
 #### InvalidIndexException
 This Exception will raise, if the Index on a function that doesnt return something, cannot find a specific Index like this:
 ```py
