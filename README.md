@@ -43,6 +43,14 @@ print(table.build()) # Table#Build() will return the table as a string
 Here you go ;)
 <hr>
 
+#### Define a new Design
+Simple as before, change the design of the table with this here:
+```py
+table.set_theme('|', '-', '+') # Horizontal, Vertical and last one is the dot between
+```
+This will display a table with the normal design
+<hr>
+
 #### Define new Header
 It is possible to define a new header with following code snippet:
 ```py
