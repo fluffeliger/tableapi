@@ -1,3 +1,6 @@
+### QUICK NOTE:
+This repository is old, so the code is old too. Dont judge me please c:
+
 # TableAPI
 TableAPI is a very simple "API"  to create tables in the python console.
 Its not much but i love this project lmao :)
@@ -136,3 +139,4 @@ The Exception just means, that the Field on the row-index and column-index isn't
 
 ##### Have fun coding <3
 ##### ~fluffy
+
